@@ -27,7 +27,7 @@ app.post('/usuario', (req, res) => {
 })
 
 app.put('/usuario/:id', (req, res) => {    
-    const id = req.params.id;
+    const id = req.params.id;    
     res.json( { id })
 })
 
