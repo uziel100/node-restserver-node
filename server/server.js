@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.use( require('./routes/usuario') );
+// Configuracion global de rutas
+app.use( require('./routes/index') );
 
 mongosse.connect( process.env.urlDb , 
     { 
@@ -22,8 +23,8 @@ mongosse.connect( process.env.urlDb ,
     }, 
     ( err, res ) => {
         if(err) throw err;
-        console.log("==> Base de datos ONLINE ==> ;)");
-})
+        console.log("==> Base de datos ONLINE ==> ;)");        
+    })
 
 app.listen( process.env.PORT , () => {
     console.log("Escuchando en el puerto", process.env.PORT );
