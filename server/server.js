@@ -3,14 +3,20 @@ require('./config/config');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongosse = require('mongoose');
+const path = require('path');
+
 
 const app = express();
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended:false }))
  
 // parse application/json
 app.use(bodyParser.json())
+
+// habilitar el public
+app.use( express.static(path.resolve(__dirname,"../public")))
+
 
 // Configuracion global de rutas
 app.use( require('./routes/index') );
