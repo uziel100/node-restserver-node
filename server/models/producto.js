@@ -28,6 +28,10 @@ var productoSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Usuario",
   },
+  img:{
+    type: String,
+    required: false
+  }  
 });
 
 module.exports = mongoose.model("Producto", productoSchema);

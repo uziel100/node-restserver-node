@@ -11,23 +11,15 @@
 </head>
 
 <body>
+
+    <img src="http://localhost:3000/imagen/usuarios/5f41e8d063dab92738a8f58a-585.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJnb29nbGUiOmZhbHNlLCJfaWQiOiI1ZjQxZThkMDYzZGFiOTI3MzhhOGY1OGEiLCJub21icmUiOiJUZXN0IDEiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsIl9fdiI6MCwiaW1nIjoiNWY0MWU4ZDA2M2RhYjkyNzM4YThmNThhLTU4NS5wbmcifSwiaWF0IjoxNTk5MTU0NzIyLCJleHAiOjE1OTkxNTczMTR9.3uaAviUHiHG_d1sMQm5LsFhqygFBh5DGTeYUEnhajmo" alt="">
+
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <br>
     <a href="#" onclick="signOut();">Sign out</a>
-    <button onclick="prueba()" >Prueba</button>
+   
 
-    <script>
-
-        async function prueba(){
-            try{    
-                const res = await fetch('/prueba')
-                const data = await res.json();
-                console.log('data: ',data);
-            }catch(e){
-                console.log("error: ",e);
-            }
-        }
-
+    <script>    
         function onSignIn(googleUser) {
             // console.log("user", googleUser);       
             var profile = googleUser.getBasicProfile();
